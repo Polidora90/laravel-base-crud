@@ -19,3 +19,6 @@ Route::get('/', function () {
 
 // comics get: mostra tutti i fumetti
 Route::get('/comics','ComicController@index')->name('comics.index');
+
+//mostra i dettagli di un solo fumetto
+Route::get('/comics/{userId}','ComicController@show')->name('comics.show');
