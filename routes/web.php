@@ -21,4 +21,8 @@ Route::get('/', function () {
 Route::get('/comics','ComicController@index')->name('comics.index');
 
 //mostra i dettagli di un solo fumetto
-Route::get('/comics/{userId}','ComicController@show')->name('comics.show');
+Route::get('/comics/{id}','ComicController@show')->name('comics.show');
+
+
+//rotta che mostra il form
+Route::get('/comics/create','ComicController@create')->name('comics.create');

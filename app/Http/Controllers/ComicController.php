@@ -29,7 +29,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view('comics.create');
     }
 
     /**
@@ -49,14 +49,15 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Comic $id)
     {
-        $comic = Comic::find($id);
-
-        return view('comics_show', [
+        return view('comics.show', [
             'comic' => $comic
         ]);
     }
+   
+
+
 
     /**
      * Show the form for editing the specified resource.
