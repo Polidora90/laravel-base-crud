@@ -23,5 +23,8 @@ Route::get('/comics','ComicController@index')->name('comics.index');
 //rotta che mostra il form
 Route::get('/comics/create','ComicController@create')->name('comics.create');
 
+//salva i dati ricevuti creando un nuovo fumetto
+Route::post('/comics', 'ComicController@store')->name('comics.store');
+
 //mostra i dettagli di un solo fumetto
 Route::get('/comics/{id}','ComicController@show')->name('comics.show');
