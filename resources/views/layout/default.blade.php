@@ -7,6 +7,10 @@
     <title>@yield('page_title')</title>
 </head>
 <body>
+    <header>
+        <a href="{{ route('comics.index') }}">Vai a tutti i tuoi fumetti</a> <br>
+        <a href="{{ route('comics.create') }}">Aggiungi un nuovo fumetto</a>
+    </header>
 
     <main>
         @yield('content') 

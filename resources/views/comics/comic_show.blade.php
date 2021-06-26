@@ -14,6 +14,8 @@
     <li>Price: {{ $comic->series }}</li>
     <li>Price: {{ $comic->price }}</li>
     <li>Type: {{ $comic->type }}</li>
+    <li>Type: {{ $comic->sale_date }}</li>
+
 
 </ul>
 

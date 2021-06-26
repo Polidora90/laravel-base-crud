@@ -15,6 +15,7 @@
         <th>Price</th>
         <th>Series</th>
         <th>Type</th>
+        <th>Sale date</th>
     </thead>
 
     <tbody>
@@ -26,6 +27,8 @@
                 <td>{{ $comic['price'] }}</td>
                 <td>{{ $comic['series'] }}</td>
                 <td>{{ $comic['type'] }}</td>
+                <td>{{ $comic['sale_date'] }}</td>
+
             </tr>
         @endforeach
     </tbody>
