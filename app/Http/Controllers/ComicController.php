@@ -43,13 +43,13 @@ class ComicController extends Controller
         $newComicData = $request->all();
 
         $newComic = new Comic();
+       
         $newComic->title = $newComicData['title'];
         $newComic->description = $newComicData['description'];
         $newComic->price = $newComicData['price'];
         $newComic->series = $newComicData['series'];
         $newComic->type = $newComicData['type'];
         $newComic->sale_date = $newComicData['sale_date'];
-
 
         $newComic->save();
 
@@ -82,7 +82,11 @@ class ComicController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comic = Comic::find($id);
+
+        return view('comics.comic_edit', [
+            'comic'=>$comic
+        ]);
     }
 
     /**
@@ -94,7 +98,15 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //prendo i dati (fumetto singolo e dati che inserisce l'utente)
+        $comic = Comic::find($id);
+        $formData = $request->all();
+
+        //al metodo update passo l'array assoc che ho creato sopra: contiene i dati del form modificato
+        //non serve usare il save()
+        $comic->update($formData);
+
+        return redirect()->route('comics.show', $comic->id);
     }
 
     /**

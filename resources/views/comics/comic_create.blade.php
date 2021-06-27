@@ -11,7 +11,7 @@
         <input type="text" name="title" id="title"> <br>
 
         <label for="description">Descrizione</label>
-        <input type="text" name="description" id="description"> <br>
+        <textarea type="text" name="description" id="description" rows="10" cols="50"> </textarea><br>
 
         <label for="price">Price</label>
         <input type="text" name="price" id="price"> <br>
@@ -25,7 +25,7 @@
         <label for="sale_date">Sale Date</label>
         <input type="text" name="sale_date" id="sale_date"> <br>
 
-        <input type="submit" value="invia">
+        <input type="submit" value="Invia">
     
     </form>
     

@@ -28,6 +28,9 @@
                 <td>{{ $comic['series'] }}</td>
                 <td>{{ $comic['type'] }}</td>
                 <td>{{ $comic['sale_date'] }}</td>
+                <td>
+                    <a href="{{ route('comics.edit', $comic->id) }}">Modifica</a>
+                </td>
 
             </tr>
         @endforeach
