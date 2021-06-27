@@ -66,6 +66,11 @@ class ComicController extends Controller
     {
        //$comic = Comic::find($id);
 
+       if (is_null($comic))
+       {
+           abort(404);
+       }
+
        return view('comics.comic_show', [
            'comic'=>$comic
        ]);
@@ -82,7 +87,14 @@ class ComicController extends Controller
      */
     public function edit($id)
     {
-        $comic = Comic::find($id);
+        $comic = Comic::findOrFail($id);
+
+        /*
+        if (is_null($comic))
+        {
+            abort(404);
+        }
+        */
 
         return view('comics.comic_edit', [
             'comic'=>$comic
@@ -99,7 +111,7 @@ class ComicController extends Controller
     public function update(Request $request, $id)
     {
         //prendo i dati (fumetto singolo e dati che inserisce l'utente)
-        $comic = Comic::find($id);
+        $comic = Comic::findOrFail($id);
         $formData = $request->all();
 
         //al metodo update passo l'array assoc che ho creato sopra: contiene i dati del form modificato
