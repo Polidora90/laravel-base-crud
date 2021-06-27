@@ -32,6 +32,9 @@ Route::get('/comics/{comic}','ComicController@show')->name('comics.show');
 //salva i dati inseriti nel form 'modifica'
 Route::match(["PUT", "PATCH"], "/comics/{comic}", "ComicController@update")->name('comics.update');
 
+//elimina un fumetto
+Route::delete('/comics/{comic}','ComicController@destroy')->name('comics.destroy');
+
 //mostra il form per modificare un fumetto
 Route::get('/comics/{comic}/edit','ComicController@edit')->name('comics.edit');
 
