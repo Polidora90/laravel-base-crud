@@ -31,7 +31,7 @@
                 <td>
                     <a href="{{ route('comics.edit', $comic->id) }}">Modifica</a>
 
-                    <form action="{{ route('comics.destroy', $comic->id) }}" method="post">
+                    <form action="{{ route('comics.destroy', $comic->id) }}" method="post" class="delete-form">
                     @csrf
                     @method('DELETE')
 
