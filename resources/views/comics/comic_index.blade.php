@@ -30,6 +30,13 @@
                 <td>{{ $comic['sale_date'] }}</td>
                 <td>
                     <a href="{{ route('comics.edit', $comic->id) }}">Modifica</a>
+
+                    <form action="{{ route('comics.destroy', $comic->id) }}" method="post">
+                    @csrf
+                    @method('DELETE')
+
+                    <input type="submit" value="ELIMINA">
+                    </form>
                 </td>
 
             </tr>
