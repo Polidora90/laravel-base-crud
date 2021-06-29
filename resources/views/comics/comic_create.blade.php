@@ -7,25 +7,43 @@
     <form action="{{ route('comics.store') }}" method='post'>
     @csrf
 
-        <label for="title">Title</label>
-        <input type="text" name="title" id="title"> <br>
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" name="title" id="title" class="form-control"> <br>
+        </div>
+      
+        <div class="mb-3">
+            <label for="description" class="form-label">Descrizione</label>
+            <textarea type="text" name="description" id="description" rows="10" cols="50" class="form-control"> </textarea><br>
+        </div>
 
-        <label for="description">Descrizione</label>
-        <textarea type="text" name="description" id="description" rows="10" cols="50"> </textarea><br>
+        <div class="row">
+            <div class="col">
+                <label for="price" class="form-label">Price</label>
+                <input type="text" name="price" id="price" class="form-control"> <br>
+            </div>
 
-        <label for="price">Price</label>
-        <input type="text" name="price" id="price"> <br>
+            <div class="col">
+                <label for="series" class="form-label">Series</label>
+                <input type="text" name="series" id="series" class="form-control"> <br>
+            </div>
+        </div>
+     
 
-        <label for="series">Series</label>
-        <input type="text" name="series" id="series"> <br>
+        <div class="row">
+            <div class="col">
+                <label for="type" class="form-label">Type</label>
+                <input type="text" name="type" id="type" class="form-control"> <br>
+            </div>
 
-        <label for="type">Type</label>
-        <input type="text" name="type" id="type"> <br>
+            <div class="col">
+                <label for="sale_date" class="form-label">Sale Date</label>
+                <input type="text" name="sale_date" id="sale_date" class="form-control"> <br>
+            </div>
+        </div>
+     
 
-        <label for="sale_date">Sale Date</label>
-        <input type="text" name="sale_date" id="sale_date"> <br>
-
-        <input type="submit" value="Invia">
+        <input type="submit" value="Invia" class="btn btn-primary">
     
     </form>
     
