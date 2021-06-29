@@ -12,8 +12,10 @@
 
     <div class="container">
         <header>
-            <a href="{{ route('comics.index') }}">Vai a tutti i tuoi fumetti</a> <br>
-            <a href="{{ route('comics.create') }}">Aggiungi un nuovo fumetto</a>
+            <div class="d-flex">
+                <a href="{{ route('comics.index') }}" class="btn btn-outline-primary m-3">Vai a tutti i tuoi fumetti</a> <br>
+                <a href="{{ route('comics.create') }}" class="btn btn-outline-primary m-3">Aggiungi un nuovo fumetto</a>
+            </div>
         </header>
 
         <main>

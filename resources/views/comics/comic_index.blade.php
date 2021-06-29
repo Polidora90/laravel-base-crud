@@ -6,7 +6,7 @@
 @section('content')
 
 
-<table>
+<table class="table table-hover">
     
     <thead>
         <th>Id</th>
@@ -29,14 +29,14 @@
                 <td>{{ $comic['type'] }}</td>
                 <td>{{ $comic['sale_date'] }}</td>
                 <td>
-                    <a href="{{ route('comics.edit', $comic->id) }}">Modifica</a>
-                    <a href="{{ route('comics.show', $comic->id) }}">Dettagli</a>
+                    <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-light m-1">Modifica</a>
+                    <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-light m-1">Dettagli</a>
 
                     <form action="{{ route('comics.destroy', $comic->id) }}" method="post" class="delete-form">
                     @csrf
                     @method('DELETE')
 
-                    <input type="submit" value="ELIMINA">
+                    <input type="submit" value="ELIMINA" class="btn btn-danger m-2 btn-sm">
                     </form>
                 </td>
 
